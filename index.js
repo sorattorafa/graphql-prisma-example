@@ -1,6 +1,5 @@
 const { prisma } = require('./generated/prisma-client')
 const { GraphQLServer } = require('graphql-yoga')
-
 const { resolvers } = require('./resolvers')
 
 const server = new GraphQLServer({
@@ -16,10 +15,19 @@ server.start(() => console.log('Server is running on http://localhost:4000'))
 /*
 
 
-#create exampe
+#create user exampe
 mutation {
   createUser(name: "Bob") {
     id
+  }
+}
+
+# create Draft example
+
+mutation{
+  createDraft(title: "Tile", userId: "exampleId") {
+    id
+    title
   }
 }
 
