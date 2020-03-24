@@ -67,7 +67,17 @@ server.start(() => console.log('Server is running on http://localhost:4000'))
 
 
 /*
-select code for post with relation author
+
+
+#create exampe
+mutation {
+  createUser(name: "Bob") {
+    id
+  }
+}
+
+#select code for post with relation author
+
 mutation {
   publish(postId: "ck85xhr1u002p0852ds9tmoy3") {
     id
